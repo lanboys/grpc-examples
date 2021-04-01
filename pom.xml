@@ -50,6 +50,18 @@
       </extension>
     </extensions>
     <plugins>
+      <!--可以解决 maven 报错 不再支持源选项 1.5。请使用 1.6 或更高版本-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>utf8</encoding>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.xolstice.maven.plugins</groupId>
         <artifactId>protobuf-maven-plugin</artifactId>
